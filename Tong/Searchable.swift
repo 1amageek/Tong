@@ -13,11 +13,11 @@ import ElastiQ
 
 public protocol Searchable {
 
-    var _index: String { get }
+    static var _index: String { get }
 
-    var _type: String { get }
+    static var _type: String { get }
 
-    var _path: String { get }
+    static var _path: String { get }
 }
 
 extension Searchable {
@@ -26,12 +26,12 @@ extension Searchable {
 
     public typealias Response = Request.Response
 
-    public var _path: String {
-        return "\(_index)/\(_type)/_search"
+    public static var _path: String {
+        return "\(Self._index)/\(Self._type)/_search"
     }
 
-    public func search(query: ElastiQ, block: @escaping (Result<Response, SessionTaskError>) -> Void) {
-        let request: Request = Request(.get, path: _path)
+    public static func search(query: ElastiQ, block: @escaping (Result<Response, SessionTaskError>) -> Void) {
+        let request: Request = Request(.get, path: _path, query: query)
         Session.send(request, callbackQueue: .main, handler: block)
     }
 }

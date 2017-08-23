@@ -10,3 +10,8 @@ target 'Tong' do
   end
 
 end
+target 'Saladbar' do
+    use_frameworks!
+    pod 'APIKit'
+    pod 'ElastiQ'
+end

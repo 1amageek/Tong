@@ -8,11 +8,19 @@
 
 import Foundation
 import APIKit
+import ElastiQ
 
 public protocol ElasticSearchRequest: APIKit.Request { }
 
 extension ElasticSearchRequest {
-    public var baseURL: URL { return URL(string: Configure.shared.baseURL!)! }
+
+    private var _authURL: String {
+        return "https://\(Configure.shared.user!):\(Configure.shared.password!)@\(Configure.shared.baseURL!)"
+    }
+
+    public var baseURL: URL {
+        return URL(string: _authURL)!
+    }
 }
 
 public class Request<T: Searchable>: ElasticSearchRequest {
@@ -23,9 +31,12 @@ public class Request<T: Searchable>: ElasticSearchRequest {
 
     public var path: String
 
-    public init(_ method: HTTPMethod, path: String) {
+    public var query: Data
+
+    public init(_ method: HTTPMethod, path: String, query: ElastiQ) {
         self.method = method
         self.path = path
+        self.query = try! query.json()
     }
 
     public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {

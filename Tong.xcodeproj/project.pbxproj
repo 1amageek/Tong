@@ -10,6 +10,12 @@
 		12012B9A1F4D7C8800A1ADC5 /* Tong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12012B901F4D7C8800A1ADC5 /* Tong.framework */; };
 		12012B9F1F4D7C8800A1ADC5 /* TongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12012B9E1F4D7C8800A1ADC5 /* TongTests.swift */; };
 		12012BA11F4D7C8800A1ADC5 /* Tong.h in Headers */ = {isa = PBXBuildFile; fileRef = 12012B931F4D7C8800A1ADC5 /* Tong.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12012BAB1F4D7CA300A1ADC5 /* Searchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12012BAA1F4D7CA300A1ADC5 /* Searchable.swift */; };
+		12012BAD1F4D7CDC00A1ADC5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12012BAC1F4D7CDC00A1ADC5 /* Response.swift */; };
+		120BB3791F4D8F420040ECB1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120BB3781F4D8F420040ECB1 /* Request.swift */; };
+		120E63541F4D85F700DDB773 /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E63531F4D85F700DDB773 /* Configure.swift */; };
+		4F932E0C03C4A210A71C4A8D /* Pods_Tong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDEE0771218B7D0AD13A725 /* Pods_Tong.framework */; };
+		A20E7E72E6617F34198772DE /* Pods_TongTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCA032D8096168A1E5114B6 /* Pods_TongTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,16 @@
 		12012B991F4D7C8800A1ADC5 /* TongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12012B9E1F4D7C8800A1ADC5 /* TongTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TongTests.swift; sourceTree = "<group>"; };
 		12012BA01F4D7C8800A1ADC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12012BAA1F4D7CA300A1ADC5 /* Searchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchable.swift; sourceTree = "<group>"; };
+		12012BAC1F4D7CDC00A1ADC5 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		120BB3781F4D8F420040ECB1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		120E63531F4D85F700DDB773 /* Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
+		1FA5B10AFCA98E6CBFAE30BE /* Pods-TongTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TongTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TongTests/Pods-TongTests.release.xcconfig"; sourceTree = "<group>"; };
+		257DB577EFCAB397BF3E9AEB /* Pods-TongTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TongTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TongTests/Pods-TongTests.debug.xcconfig"; sourceTree = "<group>"; };
+		35D0C13C70A28FBC34317737 /* Pods-Tong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tong.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tong/Pods-Tong.release.xcconfig"; sourceTree = "<group>"; };
+		4CAE70B01F268AD2B1D2712B /* Pods-Tong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tong/Pods-Tong.debug.xcconfig"; sourceTree = "<group>"; };
+		5BCA032D8096168A1E5114B6 /* Pods_TongTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TongTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECDEE0771218B7D0AD13A725 /* Pods_Tong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F932E0C03C4A210A71C4A8D /* Pods_Tong.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12012B9A1F4D7C8800A1ADC5 /* Tong.framework in Frameworks */,
+				A20E7E72E6617F34198772DE /* Pods_TongTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +74,8 @@
 				12012B921F4D7C8800A1ADC5 /* Tong */,
 				12012B9D1F4D7C8800A1ADC5 /* TongTests */,
 				12012B911F4D7C8800A1ADC5 /* Products */,
+				D3F41F35A5FF7CC8CFEC27A3 /* Pods */,
+				A39B624D6752E14F58107CBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				12012B931F4D7C8800A1ADC5 /* Tong.h */,
+				12012BAA1F4D7CA300A1ADC5 /* Searchable.swift */,
+				120E63531F4D85F700DDB773 /* Configure.swift */,
+				12012BAC1F4D7CDC00A1ADC5 /* Response.swift */,
+				120BB3781F4D8F420040ECB1 /* Request.swift */,
 				12012B941F4D7C8800A1ADC5 /* Info.plist */,
 			);
 			path = Tong;
@@ -84,6 +108,26 @@
 				12012BA01F4D7C8800A1ADC5 /* Info.plist */,
 			);
 			path = TongTests;
+			sourceTree = "<group>";
+		};
+		A39B624D6752E14F58107CBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECDEE0771218B7D0AD13A725 /* Pods_Tong.framework */,
+				5BCA032D8096168A1E5114B6 /* Pods_TongTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3F41F35A5FF7CC8CFEC27A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CAE70B01F268AD2B1D2712B /* Pods-Tong.debug.xcconfig */,
+				35D0C13C70A28FBC34317737 /* Pods-Tong.release.xcconfig */,
+				257DB577EFCAB397BF3E9AEB /* Pods-TongTests.debug.xcconfig */,
+				1FA5B10AFCA98E6CBFAE30BE /* Pods-TongTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,10 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12012BA41F4D7C8800A1ADC5 /* Build configuration list for PBXNativeTarget "Tong" */;
 			buildPhases = (
+				054A74D7812A129274733CAC /* [CP] Check Pods Manifest.lock */,
 				12012B8B1F4D7C8800A1ADC5 /* Sources */,
 				12012B8C1F4D7C8800A1ADC5 /* Frameworks */,
 				12012B8D1F4D7C8800A1ADC5 /* Headers */,
 				12012B8E1F4D7C8800A1ADC5 /* Resources */,
+				60B3C6C986DA4C28B1913FB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12012BA71F4D7C8800A1ADC5 /* Build configuration list for PBXNativeTarget "TongTests" */;
 			buildPhases = (
+				CF3BA82CC5F01729AEC5191E /* [CP] Check Pods Manifest.lock */,
 				12012B951F4D7C8800A1ADC5 /* Sources */,
 				12012B961F4D7C8800A1ADC5 /* Frameworks */,
 				12012B971F4D7C8800A1ADC5 /* Resources */,
+				E6056A1848BEACDFEB73BA63 /* [CP] Embed Pods Frameworks */,
+				9203BAF392461059F9F55DB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +197,7 @@
 				TargetAttributes = {
 					12012B8F1F4D7C8800A1ADC5 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					12012B981F4D7C8800A1ADC5 = {
 						CreatedOnToolsVersion = 9.0;
@@ -189,11 +239,106 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		054A74D7812A129274733CAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tong-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60B3C6C986DA4C28B1913FB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tong/Pods-Tong-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9203BAF392461059F9F55DB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TongTests/Pods-TongTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF3BA82CC5F01729AEC5191E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TongTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6056A1848BEACDFEB73BA63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TongTests/Pods-TongTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ElastiQ/ElastiQ.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ElastiQ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TongTests/Pods-TongTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		12012B8B1F4D7C8800A1ADC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12012BAD1F4D7CDC00A1ADC5 /* Response.swift in Sources */,
+				120BB3791F4D8F420040ECB1 /* Request.swift in Sources */,
+				12012BAB1F4D7CA300A1ADC5 /* Searchable.swift in Sources */,
+				120E63541F4D85F700DDB773 /* Configure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +476,9 @@
 		};
 		12012BA51F4D7C8800A1ADC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CAE70B01F268AD2B1D2712B /* Pods-Tong.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YNCZ4JW39A;
@@ -344,6 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = team.stamp.Tong;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -351,7 +499,9 @@
 		};
 		12012BA61F4D7C8800A1ADC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35D0C13C70A28FBC34317737 /* Pods-Tong.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YNCZ4JW39A;
@@ -371,7 +521,9 @@
 		};
 		12012BA81F4D7C8800A1ADC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 257DB577EFCAB397BF3E9AEB /* Pods-TongTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = YNCZ4JW39A;
 				INFOPLIST_FILE = TongTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -384,7 +536,9 @@
 		};
 		12012BA91F4D7C8800A1ADC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FA5B10AFCA98E6CBFAE30BE /* Pods-TongTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = YNCZ4JW39A;
 				INFOPLIST_FILE = TongTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

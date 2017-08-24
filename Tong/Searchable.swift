@@ -11,7 +11,7 @@ import APIKit
 import Result
 import ElastiQ
 
-public protocol Searchable {
+public protocol Searchable: Decodable {
 
     static var _index: String { get }
 
@@ -30,8 +30,9 @@ extension Searchable {
         return "\(Self._index)/\(Self._type)/_search"
     }
 
-    public static func search(query: ElastiQ, block: @escaping (Result<Response, SessionTaskError>) -> Void) {
+    @discardableResult
+    public static func search(query: ElastiQ, block: @escaping (Result<Response, SessionTaskError>) -> Void) -> SessionTask? {
         let request: Request = Request(.get, path: _path, query: query)
-        Session.send(request, callbackQueue: .main, handler: block)
+        return Session.send(request, callbackQueue: .main, handler: block)
     }
 }

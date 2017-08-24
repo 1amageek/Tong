@@ -15,7 +15,8 @@ public protocol ElasticSearchRequest: APIKit.Request { }
 extension ElasticSearchRequest {
 
     private var _authURL: String {
-        return "https://\(Configure.shared.user!):\(Configure.shared.password!)@\(Configure.shared.baseURL!)"
+        let HTTPProtocol: String = Configure.shared.isEncrypted ? "https" : "http"
+        return "\(HTTPProtocol)://\(Configure.shared.user):\(Configure.shared.password)@\(Configure.shared.url)"
     }
 
     public var baseURL: URL {
@@ -31,20 +32,37 @@ public class Request<T: Searchable>: ElasticSearchRequest {
 
     public var path: String
 
-    public var query: Data
+    public var query: ElastiQ
+
+    public var parameters: Any? {
+        return JSONBodyParameters(JSONObject: query.body)
+    }
 
     public init(_ method: HTTPMethod, path: String, query: ElastiQ) {
         self.method = method
         self.path = path
-        self.query = try! query.json()
+        self.query = query
+    }
+
+    public var dataParser: DataParser {
+        return ElastiSearchDataParser()
     }
 
     public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
-        guard
-            let json = object as? [String: AnyObject],
-            let response: Response = Response(json: json) else {
-                throw ResponseError.unexpectedObject(object)
+        guard let data: Data = object as? Data else {
+            throw ResponseError.unexpectedObject(object)
         }
-        return response
+        return try JSONDecoder().decode(Response.self, from: data)
+    }
+}
+
+public struct ElastiSearchDataParser: DataParser {
+
+    public var contentType: String? {
+        return "application/json"
+    }
+
+    public func parse(data: Data) throws -> Any {
+        return data
     }
 }

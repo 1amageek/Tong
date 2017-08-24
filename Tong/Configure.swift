@@ -10,17 +10,25 @@ import Foundation
 
 public class Configure {
 
-    public var user: String?
+    public var isEncrypted: Bool
 
-    public var password: String?
+    public var url: String
 
-    public var baseURL: String?
+    public var user: String
 
-    public static let shared: Configure = Configure()
+    public var password: String
 
-    public class func configure(user: String, password: String, baseURL: String) {
-        shared.user = user
-        shared.password = password
-        shared.baseURL = baseURL
+    public static var shared: Configure!
+
+    public class func setup(url: String, user: String, password: String, isEncrypted: Bool = true) {
+        Configure.shared = Configure(url: url, user: user, password: password, isEncrypted: isEncrypted)
+    }
+
+    private init(url: String, user: String, password: String, isEncrypted: Bool = true) {
+        self.isEncrypted = isEncrypted
+        self.url = url
+        self.user = user
+        self.password = password
+        Configure.shared = self
     }
 }

@@ -8,28 +8,73 @@
 
 import Foundation
 
-public class Response<T: Searchable> {
+public struct Response<T: Searchable>: Decodable {
 
     public typealias Element = T
 
-    public var took: Int = 0
+    public enum Keys: String, CodingKey {
+        case took       = "took"
+        case timedOut   = "timed_out"
+        case _shards    = "_shards"
+        case hits       = "hits"
+    }
 
-    public var timedOut: Bool = false
+    public let took: Int
 
-    public var _shards: [AnyHashable: Int] = [:]
+    public let timedOut: Bool
 
-    public var hits: Hits<Element>
+    public let _shards: Shards
 
-    public init?(json: Any) {
-        self.hits = Hits(total: 0, maxScore: 0, hits: [])
+    public let hits: Hits<Element>
+
+    public init(took: Int, timedOut: Bool, _shards: Shards, hits: Hits<Element>) {
+        self.took = took
+        self.timedOut = timedOut
+        self._shards = _shards
+        self.hits = hits
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container           = try decoder.container(keyedBy: Response.Keys.self)
+        let took: Int           = try container.decode(Int.self, forKey: .took)
+        let timedOut: Bool      = try container.decode(Bool.self, forKey: .timedOut)
+        let _shards: Shards     = try container.decode(Shards.self, forKey: ._shards)
+        let hits: Hits<Element> = try container.decode(Hits<Element>.self, forKey: .hits)
+        self.init(took: took, timedOut: timedOut, _shards: _shards, hits: hits)
     }
 }
 
-public struct Hits<T: Searchable> {
+public struct Shards: Decodable {
+    let failed: Int = 0
+    let successful: Int = 0
+    let total: Int = 5
+}
+
+public struct Hits<T: Searchable>: Decodable {
+
+    public enum Keys: String, CodingKey {
+        case total      = "total"
+        case maxScore   = "max_score"
+        case hits       = "hits"
+    }
 
     public var total: Int = 0
 
     public var maxScore: Int = 0
 
     public var hits: [T]
+
+    public init(total: Int, maxScore: Int, hits: [T]) {
+        self.total = total
+        self.maxScore = maxScore
+        self.hits = hits
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container       = try decoder.container(keyedBy: Hits.Keys.self)
+        let total: Int      = try container.decode(Int.self, forKey: .total)
+        let maxScore: Int   = try container.decode(Int.self, forKey: .maxScore)
+        let hits: [T]       = try container.decode([T].self, forKey: .hits)
+        self.init(total: total, maxScore: maxScore, hits: hits)
+    }
 }

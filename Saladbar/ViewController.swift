@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let query: ElastiQ = ElastiQ().term("contentID", "-Ks8QKsGXfiufWXvaC1a")
+        let query: ElastiQ = ElastiQ().term("_createdAt", 1503396721450)
+        print(query.body)
         Post.search(query: query) { (result) in
             switch result {
             case .success(let response): print(response)

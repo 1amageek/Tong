@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "Tong"
   s.version      = "0.0.1"
-  s.summary      = ""
+  s.summary      = "Tong works with Salada to speed up the development of iOS applications."
   s.description  = <<-DESC
   Tong is library for using ElasticSearch with Swift.
   TypeSafe can handle Type to retrieve.
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "10.0"
   s.source       = { :git => "https://github.com/1amageek/Tong.git", :tag => "#{s.version}" }
   s.source_files  = "Tong/**/*.swift"
-  s.public_header_files = "Tong/**/*.h"
+  #s.public_header_files = "Tong/**/*.h"
   s.requires_arc = true
   s.dependency "APIKit"
   s.dependency "ElastiQ"

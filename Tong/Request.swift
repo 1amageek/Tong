@@ -15,7 +15,7 @@ public protocol ElasticSearchRequest: APIKit.Request { }
 extension ElasticSearchRequest {
 
     private var _authURL: String {
-        let HTTPProtocol: String = Configure.shared.isEncrypted ? "https" : "http"
+        let HTTPProtocol: String  = Configure.shared.isEncrypted ? "https" : "http"
         return "\(HTTPProtocol)://\(Configure.shared.user):\(Configure.shared.password)@\(Configure.shared.url)"
     }
 
@@ -34,7 +34,7 @@ public class Request<T: Searchable>: ElasticSearchRequest {
 
     public var query: ElastiQ
 
-    public var parameters: Any? {
+    public var bodyParameters: BodyParameters? {
         return JSONBodyParameters(JSONObject: query.body)
     }
 
@@ -49,6 +49,7 @@ public class Request<T: Searchable>: ElasticSearchRequest {
     }
 
     public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+        print(object)
         guard let data: Data = object as? Data else {
             throw ResponseError.unexpectedObject(object)
         }

@@ -32,7 +32,7 @@ extension Searchable {
 
     @discardableResult
     public static func search(query: ElastiQ, block: @escaping (Result<Response, SessionTaskError>) -> Void) -> SessionTask? {
-        let request: Request = Request(.get, path: _path, query: query)
+        let request: Request = Request(.post, path: _path, query: query)
         return Session.send(request, callbackQueue: .main, handler: block)
     }
 }

@@ -16,10 +16,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let query: ElastiQ = ElastiQ().term("_createdAt", 1503396721450)
-        print(query.body)
+        print(String(data: try! query.json(), encoding: .utf8)!)
+        
         Post.search(query: query) { (result) in
             switch result {
             case .success(let response): print(response)
+                print(response.hits.hits)
             case .failure(let error): print(error)
             }
         }

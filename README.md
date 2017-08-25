@@ -13,6 +13,10 @@ Note: CocoaPods 1.3.1 is required to install Tong.
 
 ## Usage
 
+Configure in AppDelegate
+
+`Tong.Configure.setup(url: "URL", user: "user", password: "password", isEncrypted: false)`
+
 Make Object conforming to Searchable
 ``` swift
 class Post: Object, Searchable {

@@ -23,7 +23,7 @@ extension ElasticSearchRequest {
     }
 }
 
-public struct Request<T: Searchable>: ElasticSearchRequest {
+public struct Request<T: Codable>: ElasticSearchRequest {
 
     public typealias Response = Tong.Response<T>
 

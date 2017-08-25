@@ -11,7 +11,7 @@ import APIKit
 import Result
 //import ElastiQ
 
-public protocol Searchable: Decodable {
+public protocol Searchable {
 
     static var _index: String { get }
 
@@ -20,7 +20,7 @@ public protocol Searchable: Decodable {
     static var _path: String { get }
 }
 
-extension Searchable {
+extension Searchable where Self: Codable {
 
     public typealias Request = Tong.Request<Self>
 

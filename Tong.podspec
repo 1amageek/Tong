@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Tong"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Tong works with Salada to speed up the development of iOS applications."
   s.description  = <<-DESC
   Tong is library for using ElasticSearch with Swift.
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   #s.public_header_files = "Tong/**/*.h"
   s.requires_arc = true
   s.dependency "APIKit"
-  #s.dependency "ElastiQ", :get => "https://github.com/1amageek/ElastiQ"
+  #s.dependency "ElastiQ"
 
 end

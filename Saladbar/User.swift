@@ -9,7 +9,7 @@
 import Foundation
 import Tong
 
-class Post: NSObject, Searchable {
+class Post: NSObject, Searchable, Codable {
 
     static var _index: String {
         return "v1"

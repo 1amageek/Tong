@@ -13,6 +13,23 @@ Note: CocoaPods 1.3.1 is required to install Tong.
 
 ## Usage
 
+Make Object conforming to Searchable
+``` swift
+class Post: Object, Searchable {
+    static var _index: String {
+        return "v1"
+    }
+
+    static var _type: String {
+        return "post"
+    }
+
+    // Anything
+}
+```
+
+### Search
+
 ``` swift
 let query: ElastiQ = ElastiQ().term("_createdAt", 1503396721450)
 Post.search(query: query) { (result) in

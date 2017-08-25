@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   #s.public_header_files = "Tong/**/*.h"
   s.requires_arc = true
   s.dependency "APIKit"
-  s.dependency "ElastiQ"
+  #s.dependency "ElastiQ", :get => "https://github.com/1amageek/ElastiQ"
 
 end

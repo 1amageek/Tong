@@ -78,6 +78,7 @@
 		12BAC1831F4DBEB2001A6E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12BAC18B1F4DBEE7001A6E61 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		12BAC1921F4EB5B1001A6E61 /* Saladbar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Saladbar.entitlements; sourceTree = "<group>"; };
+		12BAC1931F5014AF001A6E61 /* Tong.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tong.podspec; sourceTree = "<group>"; };
 		1CF764B8A0DF11CA9B4EED2F /* Pods-Saladbar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saladbar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saladbar/Pods-Saladbar.debug.xcconfig"; sourceTree = "<group>"; };
 		1FA5B10AFCA98E6CBFAE30BE /* Pods-TongTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TongTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TongTests/Pods-TongTests.release.xcconfig"; sourceTree = "<group>"; };
 		257DB577EFCAB397BF3E9AEB /* Pods-TongTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TongTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TongTests/Pods-TongTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 		12012B861F4D7C8800A1ADC5 = {
 			isa = PBXGroup;
 			children = (
+				12BAC1931F5014AF001A6E61 /* Tong.podspec */,
 				12012B921F4D7C8800A1ADC5 /* Tong */,
 				12012B9D1F4D7C8800A1ADC5 /* TongTests */,
 				12BAC1761F4DBEB2001A6E61 /* Saladbar */,

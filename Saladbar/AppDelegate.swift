@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Configure.setup(url: <#url#>, user: <#user#>, password: <#password#>, isEncrypted: false)
+        Configure.setup(url: "104.154.161.126/elasticsearch/", user: "user", password: "CG5TngLx", isEncrypted: false)
         return true
     }
 }

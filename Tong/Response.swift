@@ -60,11 +60,11 @@ public struct Hits<T: Searchable>: Decodable {
 
     public var total: Int = 0
 
-    public var maxScore: Int = 0
+    public var maxScore: Int? = 0
 
     public var hits: [T]
 
-    public init(total: Int, maxScore: Int, hits: [T]) {
+    public init(total: Int, maxScore: Int?, hits: [T]) {
         self.total = total
         self.maxScore = maxScore
         self.hits = hits
@@ -73,7 +73,7 @@ public struct Hits<T: Searchable>: Decodable {
     public init(from decoder: Decoder) throws {
         let container       = try decoder.container(keyedBy: Hits.Keys.self)
         let total: Int      = try container.decode(Int.self, forKey: .total)
-        let maxScore: Int   = try container.decode(Int.self, forKey: .maxScore)
+        let maxScore: Int?  = try container.decode(Int?.self, forKey: .maxScore)
         let hits: [T]       = try container.decode([T].self, forKey: .hits)
         self.init(total: total, maxScore: maxScore, hits: hits)
     }

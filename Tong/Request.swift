@@ -8,7 +8,6 @@
 
 import Foundation
 import APIKit
-import ElastiQ
 
 public protocol ElasticSearchRequest: APIKit.Request { }
 
@@ -24,7 +23,7 @@ extension ElasticSearchRequest {
     }
 }
 
-public class Request<T: Searchable>: ElasticSearchRequest {
+public struct Request<T: Searchable>: ElasticSearchRequest {
 
     public typealias Response = Tong.Response<T>
 
@@ -32,13 +31,13 @@ public class Request<T: Searchable>: ElasticSearchRequest {
 
     public var path: String
 
-    public var query: ElastiQ
+    public var query: Any
 
     public var bodyParameters: BodyParameters? {
-        return JSONBodyParameters(JSONObject: query.body)
+        return JSONBodyParameters(JSONObject: query)
     }
 
-    public init(_ method: HTTPMethod, path: String, query: ElastiQ) {
+    public init(_ method: HTTPMethod, path: String, query: Any) {
         self.method = method
         self.path = path
         self.query = query
@@ -49,7 +48,6 @@ public class Request<T: Searchable>: ElasticSearchRequest {
     }
 
     public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
-        print(object)
         guard let data: Data = object as? Data else {
             throw ResponseError.unexpectedObject(object)
         }

@@ -2,6 +2,8 @@
 
 Tong is library for using ElasticSearch with Swift.
 
+Tong depends on [ElastiQ](https://github.com/sgr-ksmt/ElastiQ).
+
 ## Installation
 
 #### [CocoaPods](https://github.com/cocoapods/cocoapods)

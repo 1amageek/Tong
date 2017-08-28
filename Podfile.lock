@@ -1,7 +1,7 @@
 PODS:
   - APIKit (3.1.1):
     - Result (~> 3.0)
-  - ElastiQ (0.2)
+  - ElastiQ (0.3)
   - Result (3.2.3)
 
 DEPENDENCIES:
@@ -10,7 +10,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   APIKit: 7460983f490d3bde6aaaaa4164d18c9865a6f91d
-  ElastiQ: e5e7ebccd711f534144ec6d8c0d46c572e60d2d1
+  ElastiQ: d0c6601f55d00aed5f05ec5a1e76b3b82e6d38ec
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
 
 PODFILE CHECKSUM: 3288abe2aa04c584f28b1299b6d3b54c2fdb39a0

@@ -9,9 +9,9 @@
 import Foundation
 import APIKit
 import Result
-//import ElastiQ
+import ElastiQ
 
-public protocol Searchable {
+public protocol Searchable: Codable {
 
     static var _index: String { get }
 
@@ -20,7 +20,7 @@ public protocol Searchable {
     static var _path: String { get }
 }
 
-extension Searchable where Self: Codable {
+extension Searchable {
 
     public typealias Request = Tong.Request<Self>
 
@@ -30,10 +30,10 @@ extension Searchable where Self: Codable {
         return "\(Self._index)/\(Self._type)/_search"
     }
 
-//    @discardableResult
-//    public static func search(query: ElastiQ, block: @escaping (Result<Response, SessionTaskError>) -> Void) -> SessionTask? {
-//        return Self.search(query: query.body, block: block)
-//    }
+    @discardableResult
+    public static func search(query: ElastiQ, block: @escaping (Result<Response, SessionTaskError>) -> Void) -> SessionTask? {
+        return Self.search(query: query.body, block: block)
+    }
 
     @discardableResult
     public static func search(query: Any, block: @escaping (Result<Response, SessionTaskError>) -> Void) -> SessionTask? {

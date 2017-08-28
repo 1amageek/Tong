@@ -15,11 +15,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let query: ElastiQ = ElastiQ().term("_createdAt", 1503396721450)
+        let query: ElastiQ = ElastiQ()
         print(String(data: try! query.json(), encoding: .utf8)!)
-        Post.search(query: ["query": [:]]) { (result) in
+        Post.search(query: query) { (result) in
             switch result {
-            case .success(let response): print(response)
+            case .success(let response): print(response.objects)
             case .failure(let error): print(error)
             }
         }

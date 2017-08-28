@@ -27,6 +27,10 @@ public struct Response<T: Codable>: Decodable {
 
     public let hits: Hits<Element>
 
+    public var objects: [Element] {
+        return self.hits.hits.flatMap { $0._source }
+    }
+
     public init(took: Int, timedOut: Bool, _shards: Shards, hits: Hits<Element>) {
         self.took = took
         self.timedOut = timedOut

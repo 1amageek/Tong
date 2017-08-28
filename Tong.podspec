@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Tong"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Tong works with Salada to speed up the development of iOS applications."
   s.description  = <<-DESC
   Tong is library for using ElasticSearch with Swift.

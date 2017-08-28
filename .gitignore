@@ -2,7 +2,7 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 #
-AppDelegate.swift
+Tong/AppDelegate.swift
 
 ## Build generated
 build/

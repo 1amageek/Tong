@@ -14,17 +14,17 @@ public class Configure {
 
     public var url: String
 
-    public var user: String
+    public var user: String?
 
-    public var password: String
+    public var password: String?
 
     public static var shared: Configure!
 
-    public class func setup(url: String, user: String, password: String, isEncrypted: Bool = true) {
+    public class func setup(url: String, user: String? = nil, password: String? = nil, isEncrypted: Bool = true) {
         Configure.shared = Configure(url: url, user: user, password: password, isEncrypted: isEncrypted)
     }
 
-    private init(url: String, user: String, password: String, isEncrypted: Bool = true) {
+    private init(url: String, user: String? = nil, password: String? = nil, isEncrypted: Bool = true) {
         self.isEncrypted = isEncrypted
         self.url = url
         self.user = user

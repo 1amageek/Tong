@@ -15,7 +15,11 @@ extension ElasticSearchRequest {
 
     private var _authURL: String {
         let HTTPProtocol: String  = Configure.shared.isEncrypted ? "https" : "http"
-        return "\(HTTPProtocol)://\(Configure.shared.user):\(Configure.shared.password)@\(Configure.shared.url)"
+        var authInfo: String = ""
+        if let user: String = Configure.shared.user, let password: String = Configure.shared.password {
+            authInfo = "\(user):\(password)@"
+        }
+        return "\(HTTPProtocol)://\(authInfo)\(Configure.shared.url)"
     }
 
     public var baseURL: URL {

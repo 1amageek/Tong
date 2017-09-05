@@ -66,11 +66,11 @@ public struct Hits<T: Codable>: Decodable {
 
     public var total: Int = 0
 
-    public var maxScore: Int? = 0
+    public var maxScore: Double? = 0
 
     public var hits: [Element]
 
-    public init(total: Int, maxScore: Int?, hits: [Element]) {
+    public init(total: Int, maxScore: Double?, hits: [Element]) {
         self.total = total
         self.maxScore = maxScore
         self.hits = hits
@@ -79,7 +79,7 @@ public struct Hits<T: Codable>: Decodable {
     public init(from decoder: Decoder) throws {
         let container       = try decoder.container(keyedBy: Hits.Keys.self)
         let total: Int      = try container.decode(Int.self, forKey: .total)
-        let maxScore: Int?  = try container.decode(Int?.self, forKey: .maxScore)
+        let maxScore: Double?  = try container.decode(Double?.self, forKey: .maxScore)
         let hits: [Element]       = try container.decode([Element].self, forKey: .hits)
         self.init(total: total, maxScore: maxScore, hits: hits)
     }
@@ -101,11 +101,11 @@ public struct Item<T: Codable>: Decodable {
 
     public let _id: String
 
-    public let _score: Int
+    public let _score: Double
 
     public let _source: T
 
-    public init(_index: String, _type: String, _id: String, _score: Int, _source: T) {
+    public init(_index: String, _type: String, _id: String, _score: Double, _source: T) {
         self._index = _index
         self._type = _type
         self._id = _id
@@ -118,7 +118,7 @@ public struct Item<T: Codable>: Decodable {
         let _index: String  = try container.decode(String.self, forKey: ._index)
         let _type: String   = try container.decode(String.self, forKey: ._type)
         let _id: String     = try container.decode(String.self, forKey: ._id)
-        let _score: Int     = try container.decode(Int.self, forKey: ._score)
+        let _score: Double     = try container.decode(Double.self, forKey: ._score)
         let _source: T      = try container.decode(T.self, forKey: ._source)
         self.init(_index: _index, _type: _type, _id: _id, _score: _score, _source: _source)
     }
